@@ -1,0 +1,249 @@
+/* 全局初始化 */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+body{
+    /* 本地全局背景图，替换为你的蔚蓝档案壁纸 */
+    background-image: url("bj.png");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    font-family: "微软雅黑", sans-serif;
+    color: #222;
+    line-height: 1.8;
+}
+/* 统一1400px宽度，强制页面居中 */
+.wrap, .header, .banner, .footer{
+    width: 1400px;
+    margin: 0 auto;
+}
+.wrap{
+    width: 1400px;
+    margin: 30px auto 0;
+    padding: 60px 40px;
+    /* 蔚蓝档案浅白半透底色 */
+    background: rgba(255,255,255,0.9);
+    border-radius: 16px;
+    border: 1px solid rgba(120,170,255,0.3);
+}
+
+/* 头部导航 蔚蓝档案深蓝主题栏 */
+.header{
+    width: 1400px;
+    margin: 0 auto;
+    height: 90px;
+    /* 蔚蓝档案官方深蓝 #1A4096 */
+    background-color: #1A4096;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 40px;
+    border-radius: 0 0 14px 14px;
+    box-shadow: 0 4px 12px rgba(26, 64, 150, 0.25);
+}
+/* 图片Logo样式 */
+.logo img{
+    height: 60px;
+    width: auto;
+    display: block;
+}
+.nav a{
+    color: #d0ddff;
+    margin-left: 32px;
+    font-size: 17px;
+    transition: 0.3s;
+    padding: 8px 12px;
+    border-radius: 8px;
+}
+.nav a.active, .nav a:hover{
+    color: #ffffff;
+    background-color: rgba(255,255,255,0.18);
+}
+
+/* Banner轮播 蔚蓝档案渐变蓝 */
+.banner{
+    width: 1400px;
+    margin: 0 auto;
+    height: 440px;
+    overflow: hidden;
+    position: relative;
+    margin-top: 20px;
+    border-radius: 16px;
+    box-shadow: 0 4px 16px rgba(26, 64, 150, 0.2);
+}
+.banner-box{
+    width: 100%;
+    height: 100%;
+}
+.banner-item{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 46px;
+    color: #fff;
+    text-align: center;
+    line-height: 440px;
+    opacity: 0;
+    transition: opacity 0.8s ease;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.4);
+}
+/* 轮播本地蔚蓝档案图 */
+.item1{
+    background-image: url("banner1.jpg");
+    background-size: cover;
+    background-position: center;
+}
+.item2{
+    background-image: url("banner2.jpg");
+    background-size: cover;
+    background-position: center;
+}
+.item3{
+    background-image: url("banner3.jpg");
+    background-size: cover;
+    background-position: center;
+}
+.banner-item.active{
+    opacity: 1;
+}
+.banner-dot{
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 15px;
+}
+.dot{
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.4);
+}
+.dot.active{
+    background: #fff;
+    box-shadow: 0 0 6px #fff;
+}
+
+/* 网站介绍区域 */
+.intro h2{
+    text-align: center;
+    font-size: 32px;
+    color: #1A4096;
+    margin-bottom: 40px;
+    letter-spacing: 2px;
+}
+.intro-flex{
+    display: flex;
+    gap: 50px;
+    align-items: center;
+}
+.intro-flex img{
+    border-radius: 12px;
+    box-shadow: 0 4px 18px rgba(26, 64, 150, 0.18);
+}
+.intro-text p{
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 16px;
+}
+
+/* 选项卡作品区 蔚蓝蓝色线条 */
+.tab-title{
+    display: flex;
+    border-bottom: 1px solid #cce0ff;
+    margin-bottom: 30px;
+}
+.tab-btn{
+    padding: 14px 38px;
+    font-size: 18px;
+    cursor: pointer;
+    color: #667799;
+    position: relative;
+}
+.tab-btn.active{
+    color: #1A4096;
+}
+.tab-btn.active::after{
+    content: "";
+    width: 100%;
+    height: 3px;
+    background: #1A4096;
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+}
+.tab-item{
+    display: none;
+}
+.tab-item.active{
+    display: block;
+}
+.work-list{
+    display: flex;
+    gap: 30px;
+}
+.work-card{
+    width: 300px;
+    background: rgba(240, 246, 255, 0.95);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 14px rgba(26, 64, 150, 0.12);
+    border: 1px solid #d0e0ff;
+    transition: 0.3s;
+}
+.work-card:hover{
+    transform: translateY(-6px);
+    box-shadow: 0 8px 20px rgba(26, 64, 150, 0.22);
+}
+.work-card img{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+.work-card h4{
+    padding: 14px 16px 8px;
+    font-size: 17px;
+    color: #1A4096;
+}
+.work-card a{
+    display: block;
+    padding: 0 16px 16px;
+    color: #2563eb;
+}
+.work-card a:hover{
+    color: #1A4096;
+    text-decoration: underline;
+}
+
+/* 底部footer 蔚蓝档案深蓝色 */
+.footer{
+    width: 1400px;
+    margin: 50px auto 0;
+    height: 140px;
+    background: #1A4096;
+    border-radius: 14px 14px 0 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+    color: #d0ddff;
+    box-shadow: 0 -4px 12px rgba(26, 64, 150, 0.25);
+}
+.footer-left h3{
+    color: #fff;
+    font-size: 24px;
+    margin-bottom: 8px;
+    letter-spacing: 1px;
+}
+/* 邮件按钮hover效果 */
+a[href^="mailto"]:hover {
+    opacity: 0.85;
+}

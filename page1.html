@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>剪辑作品 | 蔚蓝档案作品集</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* B站视频自适应样式 */
+        .bilibili-box{
+            width: 100%;
+            height: 0;
+            padding-bottom: 56.25%; /* 16:9比例 */
+            position: relative;
+            border-radius: 12px;
+            overflow: hidden;
+            margin:20px 0;
+            box-shadow:0 4px 16px rgba(26, 64, 150, 0.2);
+        }
+        .bilibili-box iframe{
+            position: absolute;
+            width:100%;
+            height:100%;
+            left:0;
+            top:0;
+        }
+    </style>
+</head>
+<body>
+<header class="header">
+    <div class="logo">
+        <img src="logo.png" alt="蔚蓝档案 Logo">
+    </div>
+    <nav class="nav">
+        <a href="index.html">首页</a>
+        <a href="page1.html" class="active">剪辑作品</a>
+        <a href="page2.html">游戏测评</a>
+        <a href="page3.html">网页设计</a>
+        <a href="page4.html">图文文案</a>
+        <a href="page5.html">关于我</a>
+    </nav>
+</header>
+
+<section class="wrap" style="min-height:800px;">
+    <h2 style="text-align:center;margin-bottom:40px;font-size:32px;color:#1A4096;">蔚蓝档案剪辑全部作品</h2>
+
+    <!-- 第一个B站视频：主线MAD -->
+    <h3 style="color:#1A4096;font-size:22px;margin-top:30px;">1. 蔚蓝档案主线剧情MAD</h3>
+    <div class="bilibili-box">
+        <!-- 替换BV号为你的视频 -->
+        <iframe src="https://player.bilibili.com/player.html?bvid=BV1cwhqziEcz&page=1&danmaku=0&autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
+    </div>
+    <p style="color:#444;line-height:1.8;">视频简介：整合主线全部CG剧情，卡点抒情BGM，7天剪辑完成，适配全屏观看。</p>
+
+    <!-- 第二个B站视频：角色混剪 -->
+    <h3 style="color:#1A4096;font-size:22px;margin-top:60px;">2. 角色高光燃向混剪</h3>
+    <div class="bilibili-box">
+        <iframe src="https://player.bilibili.com/player.html?bvid=BV1BHnwzBEAn&page=1&danmaku=0&autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
+    </div>
+    <p style="color:#444;line-height:1.8;">视频简介：各角色名场面合集，高燃转场特效，适合全屏观看。</p>
+
+    <!-- 卡片列表入口，跳转详情 -->
+    <h3 style="color:#1A4096;font-size:22px;margin-top:60px;">全部剪辑作品列表</h3>
+    <div class="work-list" style="margin-top:20px;">
+        <div class="work-card">
+            <img src="https://picsum.photos/id/10/300/200">
+            <h4>蔚蓝档案主线MAD</h4>
+            <a href="detail1.html">查看完整详情</a>
+        </div>
+        <div class="work-card">
+            <img src="https://picsum.photos/id/11/300/200">
+            <h4>角色高光混剪短片</h4>
+            <a href="detail2.html">查看完整详情</a>
+        </div>
+        <div class="work-card">
+            <img src="https://picsum.photos/id/12/300/200">
+            <h4>活动剧情治愈短片</h4>
+        </div>
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="footer-left">
+        <h3>蔚蓝档案 创作工作室</h3>
+        <p>同人MAD剪辑 | 二次元网页设计 | 游戏图文创作</p>
+    </div>
+    <div class="footer-right">
+        <!-- 邮箱跳转链接，替换xxx@163.com为你自己邮箱 -->
+        <p>联系邮箱：<a href="mailto:3557157461@qq.com" style="color:#fff;text-decoration:underline;">3557157461@qq.com</a></p>
+        <p>© 2026 蔚蓝档案主题作品集 结课作业</p>
+    </div>
+</footer>
+</body>
+</html>

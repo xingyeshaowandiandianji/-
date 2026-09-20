@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>蔚蓝档案 | 个人作品集网站</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<!-- 顶部导航Logo 蔚蓝档案图标 -->
+<header class="header">
+    <div class="logo">
+        <!-- 本地蔚蓝档案logo图片，放根目录 -->
+        <img src="logo.png" alt="蔚蓝档案 Logo">
+    </div>
+    <nav class="nav">
+        <a href="index.html" class="active">首页</a>
+        <a href="page1.html">剪辑作品</a>
+        <a href="page2.html">游戏测评</a>
+        <a href="page3.html">网页设计</a>
+        <a href="page4.html">图文文案</a>
+        <a href="page5.html">关于我</a>
+    </nav>
+</header>
+
+<!-- Banner轮播区域 蔚蓝档案CG图 -->
+<section class="banner">
+    <div class="banner-box">
+        <div class="banner-item item1">蔚蓝档案 MAD创作合集</div>
+        <div class="banner-item item2">学园CG原画展示</div>
+        <div class="banner-item item3">剧情混剪视频</div>
+    </div>
+    <div class="banner-dot">
+        <span class="dot active"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+    </div>
+</section>
+
+<!-- 网站介绍 -->
+<section class="intro wrap">
+    <h2>网站介绍</h2>
+    <div class="intro-flex">
+        <img src="img/avatar.jpg" alt="蔚蓝档案配图">
+        <div class="intro-text">
+            <p>欢迎来到蔚蓝档案主题私人作品集网站！本站以蔚蓝档案学园校园风格为整体设计基调，采用官方蓝白配色，还原游戏清新二次元视觉效果。</p>
+            <p>网站使用HTML5+CSS3原生开发，内置自动轮播Banner、作品分类选项卡、多页面跳转交互，全站宽度固定1400px居中展示，图文排版贴合二次元网页审美，满足结课作业全部规范要求。站内所有剪辑、设计作品均围绕蔚蓝档案、二次元游戏内容创作。</p>
+        </div>
+    </div>
+</section>
+
+<!-- 选项卡作品区 -->
+<section class="tab-area wrap">
+    <div class="tab-title">
+        <h3 class="tab-btn active" data-tab="tab1">蔚蓝档案剪辑</h3>
+        <h3 class="tab-btn" data-tab="tab2">二次元网页</h3>
+        <h3 class="tab-btn" data-tab="tab3">游戏测评</h3>
+    </div>
+    <div class="tab-content">
+        <div class="tab-item tab1 active">
+            <div class="work-list">
+                <div class="work-card">
+                    <img src="img/b站MDA.webp">
+                    <h4>b站混剪MAD</h4>
+                    <a href="detail1.html">查看详情</a>
+                </div>
+                <div class="work-card">
+                    <img src="https://picsum.photos/id/11/300/200">
+                    <h4>角色高光混剪短片</h4>
+                    <a href="detail2.html">查看详情</a>
+                </div>
+                <div class="work-card">
+                    <img src="https://picsum.photos/id/12/300/200">
+                    <h4>活动剧情治愈短片</h4>
+                </div>
+            </div>
+        </div>
+        <div class="tab-item tab2">
+            <div class="work-list">
+                <div class="work-card">
+                    <img src="https://picsum.photos/id/20/300/200">
+                    <h4>蔚蓝档案同人官网</h4>
+                    <a href="detail3.html">查看详情</a>
+                </div>
+                <div class="work-card">
+                    <img src="https://picsum.photos/id/21/300/200">
+                    <h4>角色资料展示页</h4>
+                </div>
+                <div class="work-card">
+                    <img src="https://picsum.photos/id/22/300/200">
+                    <h4>活动专题静态页面</h4>
+                </div>
+            </div>
+        </div>
+        <div class="tab-item tab3">
+            <div class="work-list">
+                <div class="work-card">
+                    <img src="https://picsum.photos/id/30/300/200">
+                    <h4>蔚蓝档案版本测评</h4>
+                </div>
+                <div class="work-card">
+                    <img src="https://picsum.photos/id/31/300/200">
+                    <h4>角色强度解析图文</h4>
+                </div>
+                <div class="work-card">
+                    <img src="https://picsum.photos/id/32/300/200">
+                    <h4>活动攻略长图文</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 底部 -->
+<footer class="footer">
+    <div class="footer-left">
+        <h3>蔚蓝档案 创作工作室</h3>
+        <p>同人MAD剪辑 | 二次元网页设计 | 游戏图文创作</p>
+    </div>
+    <div class="footer-right">
+        <!-- 邮箱跳转链接，替换xxx@163.com为你自己邮箱 -->
+        <p>联系邮箱：<a href="mailto:3557157461@qq.com" style="color:#fff;text-decoration:underline;">3557157461@qq.com</a></p>
+        <p>© 2026 蔚蓝档案主题作品集 结课作业</p>
+    </div>
+</footer>
+
+
+
+
+<script>
+// 自动轮播
+const dots = document.querySelectorAll('.dot');
+const bannerItems = document.querySelectorAll('.banner-item');
+let curIndex = 0;
+function autoBanner(){
+    dots.forEach(d=>d.classList.remove('active'));
+    bannerItems.forEach(b=>b.style.opacity=0);
+    curIndex = (curIndex + 1) % 3;
+    dots[curIndex].classList.add('active');
+    bannerItems[curIndex].style.opacity = 1;
+}
+setInterval(autoBanner,3000);
+
+// 选项卡切换
+const tabBtns = document.querySelectorAll('.tab-btn');
+const tabItems = document.querySelectorAll('.tab-item');
+tabBtns.forEach(btn=>{
+    btn.onclick = function(){
+        let targetTab = this.dataset.tab;
+        tabBtns.forEach(b=>b.classList.remove('active'));
+        tabItems.forEach(t=>t.classList.remove('active'));
+        this.classList.add('active');
+        document.querySelector(`.${targetTab}`).classList.add('active');
+    }
+})
+</script>
+</body>
+</html>
